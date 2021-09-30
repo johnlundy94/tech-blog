@@ -1,0 +1,20 @@
+[
+  {
+    "name": "MVC Definition",
+    "posted_by": "Sal",
+    "date_created": "9/8/2021",
+    "description": "Also known as, model–view–controller, MVC is three connected elements that describe the flow of designing a user-interface."
+  },
+  {
+    "name": "What is Node",
+    "posted_by": "Lernantino",
+    "date_created": "9/8/2021",
+    "description": "Node is a server side environment that is used to create fully functional applications."
+  },
+  {
+    "name": "Describing Web API's",
+    "posted_by": "Amiko",
+    "date_created": "9/8/2021",
+    "description": "API stands for Application Programming Interface. There are web, browser and server api's that extend the functionality of the web, browser and server."
+  }
+]
