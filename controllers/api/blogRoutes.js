@@ -1,5 +1,4 @@
 const router = require("express").Router();
-const router = require("express").Router();
 const { Blog } = require("../../models");
 const withAuth = require("../../utils/auth");
 
@@ -26,7 +25,7 @@ router.delete("/:id", withAuth, async (req, res) => {
     });
 
     if (!blogData) {
-      res.status(404).json({ message: "No blog found with this id!" });
+      res.status(404).json({ message: "No post found with this id!" });
       return;
     }
 
@@ -36,5 +35,4 @@ router.delete("/:id", withAuth, async (req, res) => {
   }
 });
 
-module.exports = router;
 module.exports = router;
