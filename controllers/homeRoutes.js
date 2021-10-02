@@ -28,7 +28,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.get("/", async (req, res) => {
+router.get("/comment", async (req, res) => {
   try {
     // Get all comments and JOIN with user and blog data
     const commentData = await Comment.findAll({
@@ -45,7 +45,7 @@ router.get("/", async (req, res) => {
     const comments = commentData.map((comment) => comment.get({ plain: true }));
 
     // Pass serialized data and session flag into template
-    res.render("comment", {
+    res.render("blog", {
       comments,
       logged_in: req.session.logged_in,
     });
