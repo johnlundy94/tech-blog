@@ -13,7 +13,7 @@ Comment.init(
     },
     posted_by: {
       type: DataTypes.STRING,
-      allowNull: true,
+      allowNull: false,
     },
     date_created: {
       type: DataTypes.DATE,
@@ -33,6 +33,7 @@ Comment.init(
     },
     blog_id: {
       type: DataTypes.INTEGER,
+      allowNull: true,
       references: {
         model: "blog",
         key: "id",

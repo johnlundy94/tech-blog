@@ -20,26 +20,26 @@ const newFormHandler = async (event) => {
   }
 };
 
-const delButtonHandler = async (event) => {
-  if (event.target.hasAttribute("data-id")) {
-    const id = event.target.getAttribute("data-id");
+// const delButtonHandler = async (event) => {
+//   if (event.target.hasAttribute("data-id")) {
+//     const id = event.target.getAttribute("data-id");
 
-    const response = await fetch(`/api/comments/${id}`, {
-      method: "DELETE",
-    });
+//     const response = await fetch(`/api/comments/${id}`, {
+//       method: "DELETE",
+//     });
 
-    if (response.ok) {
-      document.location.replace("/comment");
-    } else {
-      alert("Failed to delete comment");
-    }
-  }
-};
+//     if (response.ok) {
+//       document.location.reload();
+//     } else {
+//       alert("Failed to delete comment");
+//     }
+//   }
+// };
 
 document
   .querySelector(".new-comment-form")
   .addEventListener("submit", newFormHandler);
 
-document
-  .querySelector(".comment-list")
-  .addEventListener("click", delButtonHandler);
+// document
+//   .querySelector(".comment-list")
+//   .addEventListener("click", delButtonHandler);

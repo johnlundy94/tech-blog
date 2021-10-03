@@ -24,7 +24,6 @@ const seedDatabase = async () => {
     await Comment.create({
       ...comment,
       user_id: users[Math.floor(Math.random() * users.length)].id,
-      blog_id: blogs[Math.floor(Math.random() * blogs.length)].id,
     });
   }
 

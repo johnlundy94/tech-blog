@@ -28,33 +28,6 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.get("/comment", async (req, res) => {
-  try {
-    // Get all comments and JOIN with user and blog data
-    const commentData = await Comment.findAll({
-      include: [
-        {
-          model: User,
-          attributes: ["name"],
-        },
-        Blog,
-      ],
-    });
-
-    // Serialize data so the template can read it
-    const comments = commentData.map((comment) => comment.get({ plain: true }));
-
-    // Pass serialized data and session flag into template
-    res.render("blog", {
-      comments,
-      logged_in: req.session.logged_in,
-    });
-  } catch (err) {
-    console.log(err);
-    res.status(500).json(err);
-  }
-});
-
 router.get("/blogs/:id", async (req, res) => {
   try {
     const blogData = await Blog.findByPk(req.params.id, {
@@ -71,6 +44,7 @@ router.get("/blogs/:id", async (req, res) => {
 
     res.render("blog", {
       ...blog,
+      comments: blog.Comments,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
