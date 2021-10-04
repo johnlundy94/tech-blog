@@ -26,9 +26,10 @@ const updateFormHandler = async (event) => {
 
   const name = document.querySelector("#update-name").value.trim();
   const description = document.querySelector("#update-desc").value.trim();
+  const id = event.target.getAttribute("data-blog_id");
 
   if (name && description) {
-    const response = await fetch(`/api/blogs`, {
+    const response = await fetch(`/api/blogs/${id}`, {
       method: "PUT",
       body: JSON.stringify({ name, description }),
       headers: {
