@@ -46,7 +46,7 @@ router.get("/blogs/:id", async (req, res) => {
 
     res.render("blog", {
       ...blog,
-      comments: blog.Comment,
+      comments: blog.comments,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
