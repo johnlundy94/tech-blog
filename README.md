@@ -19,4 +19,4 @@
 - When the user clicks on the logout button they are logged out of their profile.
 
 Link to GitHub repository: https://github.com/johnlundy94/note-taker
-Link to Heroku: https://git.heroku.com/l-tech-blog.git
+Link to Heroku: https://damp-waters-87930.herokuapp.com/
