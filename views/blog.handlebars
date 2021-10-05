@@ -1,7 +1,7 @@
 <div class="text-center">
   <h2>{{name}}</h2>
   <p>Created by {{user.name}} on {{format_date date_created}}</p>
-  <form class="form update-form">
+  <form class="form update-form" data-blog_id={{id}}>
     <div class="form-group">
       <textarea class="form-input" id="update-name" name="update-name" placeholder="{{name}}"></textarea>
     </div>
@@ -9,7 +9,7 @@
       <textarea class="form-input" id="update-desc" name="update-desc" placeholder="{{description}}"></textarea>
     </div>
     <div class="form-group">
-      <button type="submit" class="btn btn-primary" data-blog_id={{id}}>Update</button>
+      <button type="submit" class="btn btn-primary">Update</button>
     </div>
 </div>
 </form>

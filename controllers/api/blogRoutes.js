@@ -16,7 +16,7 @@ router.post("/", withAuth, async (req, res) => {
   }
 });
 
-router.put("/:id", withAuth, async (req, res) => {
+router.put("/:id", async (req, res) => {
   try {
     const blogData = await Blog.update(
       {
@@ -28,7 +28,6 @@ router.put("/:id", withAuth, async (req, res) => {
         },
       }
     );
-    console.log(blogData);
     res.status(200).json(blogData);
   } catch (err) {
     console.log(err);
