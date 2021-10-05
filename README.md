@@ -14,7 +14,11 @@
 
 - When the user makes their own blog it is populated to the homepage.
 
+- When the user updates the form and clicks on the update button the blog will be updated.
+
 - When the user clicks on the delete option, the post will be removed.
+
+- When the user makes a comment and clicks the comment button their comment will be posted.
 
 - When the user clicks on the logout button they are logged out of their profile.
 
