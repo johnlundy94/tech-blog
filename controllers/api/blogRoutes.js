@@ -28,6 +28,7 @@ router.put("/:id", withAuth, async (req, res) => {
         },
       }
     );
+    console.log(blogData);
     res.status(200).json(blogData);
   } catch (err) {
     console.log(err);
