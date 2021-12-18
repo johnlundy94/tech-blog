@@ -34,4 +34,4 @@ Link to Heroku: https://damp-waters-87930.herokuapp.com/
 
 ## Screenshot
 
-![Weather App](/assets/TechBlog.PNG)
+![Tech Blog](/assets/TechBlog.PNG)
